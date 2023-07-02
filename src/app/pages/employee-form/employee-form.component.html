@@ -1,0 +1,60 @@
+
+    <div class="row container">
+        <div class="col-md-10 offset-1">
+            <div class="card card-user">
+                <div class="card-header head">
+                    <h5 class="card-title" *ngIf="isAddMode">Add Client</h5>
+                    <h5 class="card-title" *ngIf="!isAddMode">Edit Client</h5>
+                    <a routerLink="/employee_list"> Click for Employee List</a>
+
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group ">
+                            <div class="col-md-4">
+                                <label class="form-label" for="name">First Name :- </label>
+                                <input formControlName="firstname" autocomplete="off" type="text" id="firstname"
+                                    class="form-control" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label" for="name">Last Name :- </label>
+                                <input formControlName="lastname" autocomplete="off" type="text" id="name"
+                                    class="form-control" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label" for="name">Employee Contact :- </label>
+                                <input formControlName="emp_contact" autocomplete="off" type="number"
+                                    id="emp_contact" class="form-control" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label" for="name">Address </label>
+                                <input formControlName="address" autocomplete="off" type="text" id="address"
+                                    class="form-control" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label" for="name">Salary :- </label>
+                                <input formControlName="emp_salary" autocomplete="off" type="number" id="emp_salary"
+                                    class="form-control" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label" for="name">Email :- </label>
+                                <input formControlName="emp_email" autocomplete="off" type="email" id="emp_email"
+                                    class="form-control" />
+                            </div>
+                        </div>
+                        <div class="text-center btn">
+                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 me-5" type="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+

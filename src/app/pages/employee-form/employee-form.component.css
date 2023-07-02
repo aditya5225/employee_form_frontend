@@ -1,0 +1,19 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+.btn {
+    margin-top: 10px;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    margin-top: 5px;
+    text-decoration: underline;
+}
